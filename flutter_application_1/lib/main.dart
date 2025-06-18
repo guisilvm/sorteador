@@ -3,7 +3,7 @@ import 'package:flutter_application_1/telas/tela_principal.dart';
 void main(){
   runApp(
     MaterialApp(
-    title:"Aplicativo GS",
+    title:"Aplicativo Gui Silva",
     home: HomePage(),
     )
   );
