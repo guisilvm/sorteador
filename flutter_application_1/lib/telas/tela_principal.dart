@@ -15,6 +15,8 @@ class _HomePageState extends State<HomePage> {
 
   List<int> imagemSelecionada = [0, 1, 2];
 
+double somatoria = 100.0;
+
 void sortear()
 {
 
@@ -31,6 +33,9 @@ setState(() {
 
 
           if (imagemSelecionada[0] == imagemSelecionada[1] && imagemSelecionada[1] == imagemSelecionada[2]) {
+
+somatoria = somatoria + 100.0;
+
              showDialog(
               context: context,
                builder: (context) => AlertDialog(
@@ -39,6 +44,8 @@ setState(() {
                )
              
             );
+          } else {
+            somatoria = somatoria - 100.0;
           }
         }
 
@@ -86,6 +93,7 @@ setState(() {
               ),
             ],
           ),
+          Text(somatoria.toString())
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
