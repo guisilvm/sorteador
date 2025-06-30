@@ -26,7 +26,6 @@ setState(() {
             imagemSelecionada[0] = Random().nextInt(images.length);
             imagemSelecionada[1] = Random().nextInt(images.length);
             imagemSelecionada[2] = Random().nextInt(images.length);
-          sleep(Duration(milliseconds: 500));
           });
           i++;
         }
@@ -93,7 +92,14 @@ somatoria = somatoria + 100.0;
               ),
             ],
           ),
-          Text(somatoria.toString())
+          Text(
+            "Pontuação: " + somatoria.toString(),
+             style: TextStyle(
+              fontSize: 30, 
+             color: Colors.black, 
+             fontWeight: FontWeight.w900
+             )
+          ),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
